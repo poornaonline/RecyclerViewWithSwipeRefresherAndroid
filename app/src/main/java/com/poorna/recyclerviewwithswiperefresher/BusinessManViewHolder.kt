@@ -25,6 +25,7 @@ class BusinessManViewHolder constructor(itemView: View): RecyclerView.ViewHolder
             .placeholder(R.drawable.ic_launcher_background)
             .error(R.drawable.ic_launcher_background)
 
-        Glide.with(itemView.context).load(businessMan.imageUrl!!).into(imageView)
+        Glide.with(itemView.context).load(businessMan.imageUrl!!).apply(requestOption).into(imageView)
+
     }
 }
